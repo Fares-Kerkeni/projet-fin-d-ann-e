@@ -83,11 +83,11 @@
     <div class="footer">
         <div class="nav_barre">
             <div class="item_nav_barre">
-                <a href="../Acceuil/acceuil.html"><img src="img/home.svg" alt=""></a>
-                <a href="../rewards/rewards.html"><img src="img/recompenses.svg" alt=""></a>
-                <a href="../liste_map/map.html"><img src="img/map_claire.svg" alt=""></a>
-                <a href="favoris.html"><img src="img/favorite.svg" alt=""></a>
-                <a href="compte.html"><img src="img/compte_bleu.svg" alt=""></a>
+                <a href="../Acceuil/acceuil.php"><img src="img/home.svg" alt=""></a>
+                <a href="../rewards/rewards.php"><img src="img/recompenses.svg" alt=""></a>
+                <a href="../liste_map/map.php"><img src="img/map_claire.svg" alt=""></a>
+                <a href="favoris.php"><img src="img/favorite.svg" alt=""></a>
+                <a href="compte.php"><img src="img/compte_bleu.svg" alt=""></a>
             </div> 
         </div>
     </div>  

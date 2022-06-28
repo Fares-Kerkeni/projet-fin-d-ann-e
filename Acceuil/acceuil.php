@@ -55,11 +55,11 @@
     </div>
 
     <footer>
-        <div class="home"><a href="acceuil.html"><img src="img/home.svg" alt="home_button"></a></div>
-        <div class="rewards"><a href="../rewards/rewards.html"><img src="img/reward.svg" alt="reward_button"></a></div>
-        <div class="map"><a href="../liste_map/map.html"><img src="img/map.svg" alt="map_button"></a></div>
-        <div class="fav"><a href="../compte_favoris/favoris.html"><img src="img/star.svg" alt="fav_button"></a></div>
-        <div class="account"><a href="../compte_favoris/compte.html"><img src="img/account.svg" alt="account_button"></a></div>
+        <div class="home"><a href="acceuil.php"><img src="img/home.svg" alt="home_button"></a></div>
+        <div class="rewards"><a href="../rewards/rewards.php"><img src="img/reward.svg" alt="reward_button"></a></div>
+        <div class="map"><a href="../liste_map/map.php"><img src="img/map.svg" alt="map_button"></a></div>
+        <div class="fav"><a href="../compte_favoris/favoris.php"><img src="img/star.svg" alt="fav_button"></a></div>
+        <div class="account"><a href="../compte_favoris/compte.php"><img src="img/account.svg" alt="account_button"></a></div>
     </footer>
 </body>
 <script src="acceuil.js"></script>

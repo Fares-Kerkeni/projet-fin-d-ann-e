@@ -7,10 +7,10 @@
     $password = "root";
     $pdo = new PDO("$engine:host=$host:$port;dbname=$dbname", $username, $password, [
     ]);
-    if($pdo){
-        echo"good";
-    }
-    else{
-        echo"pas good";
-    }
+    // if($pdo){
+    //     echo"good";
+    // }
+    // else{
+    //     echo"pas good";
+    // }
 ?>

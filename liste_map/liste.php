@@ -21,15 +21,15 @@
                     <img src="img/mic.svg" alt="">
                 </div>
                 <div class="map_switch_list">
-                    <a href="map.html">Carte</a>
+                    <a href="map.php">Carte</a>
                 </div>
             </div>
             <div id="filter_bar_list" class="filter_bar_list">
-                <div class="filter_list"><img src="img/hotel.png" alt=""></div>
-                <div class="filter_list"><img src="img/restaurant.png" alt=""></div>
-                <div class="filter_list"><img src="img/shopping.png" alt=""></div>
-                <div class="filter_list"><img src="img/station.png" alt=""></div>
-                <div class="filter_list"><img src="img/pharmacie.png" alt=""></div>
+                <div id="hotel" class="filter_list"><img src="img/hotel.png" alt=""></div>
+                <div id="restaurant" class="filter_list"><img src="img/restaurant.png" alt=""></div>
+                <div id="shopping" class="filter_list"><img src="img/shopping.png" alt=""></div>
+                <div id="station" class="filter_list"><img src="img/station.png" alt=""></div>
+                <div id="pharmacie" class="filter_list"><img src="img/pharmacie.png" alt=""></div>
             </div>
         </div>
         <div id="all_result_liste" class="all_result_liste">
@@ -158,44 +158,19 @@
             <div class="filter">Les plus côtés</div>
         </div>
         <div id="all_commerce" class="all_commerce">
-            <div class="commerce">
-                <!-- <div class="all_image_commerce">
-                    <img class="image_commerce" src="img/closeup-of-two-women-wearing-facemasks-during-the-covid-19-pandemic-sitting-at-cafe.jpg" alt="">
-                    <img class="image_commerce" src="img/colorful-paper-bags-placed-on-the-table.jpg" alt="">
-                    <img class="image_commerce" src="img/interior-shot-of-cafe-with-chairs-near-the-bar-with-wooden-tables.jpg" alt="">
-                </div>
-                <div class="all_texte_commerce">
-                    <span class="nom_commerce">Ibis Paris Vaugirard Porte de Versailles</span>
-                    <span class="avis_commerce">4,5 <img src="img/coeur.svg" alt=""> (132)</span>
-                    <span class="type_commerce">Hôtel - 30 km</span>
-                </div> -->
-            </div>
+            
         </div>
     </main>
     <nav>
-        <a href="../Acceuil/acceuil.html"><img src="img/bxs_home.svg" alt=""></a>
-        <a href="../rewards/rewards.html"><img src="img/gridicons_trophy.svg" alt=""></a>
-        <a href="../liste_map/map.html"><img src="img/ant-design_unordered-list-outlined.svg" alt=""></a>
-        <a href="../compte_favoris/favoris.html"><img src="img/uis_favorite.svg" alt=""></a>
-        <a href="../compte_favoris/compte.html"><img src="img/carbon_user-avatar-filled.svg" alt=""></a>
+        <a href="../Acceuil/acceuil.php"><img src="img/bxs_home.svg" alt=""></a>
+        <a href="../rewards/rewards.php"><img src="img/gridicons_trophy.svg" alt=""></a>
+        <a href="../liste_map/map.php"><img src="img/ant-design_unordered-list-outlined.svg" alt=""></a>
+        <a href="../compte_favoris/favoris.php"><img src="img/uis_favorite.svg" alt=""></a>
+        <a href="../compte_favoris/compte.php"><img src="img/carbon_user-avatar-filled.svg" alt=""></a>
     </nav>
-    <script src="js/map_list.js"></script>
+    <script src="js/list.js"></script>
     <script>
-        const search_bar_list = document.querySelector('#search_bar_list')  
-        search_bar_list.addEventListener('change', (e) => {  
-            if (e.target.value == ""){
-                document.querySelector('#filter_bar_list').style.display = "flex";
-                document.querySelector('#all_result_liste').style.display = "flex";
-                document.querySelector('#filter_commerce').style.display = "none";
-                document.querySelector('#all_commerce').style.display = "none";
-            }
-            else{
-                document.querySelector('#filter_bar_list').style.display = "none";
-                document.querySelector('#all_result_liste').style.display = "none";
-                document.querySelector('#filter_commerce').style.display = "flex";
-                document.querySelector('#all_commerce').style.display = "block";
-            }
-        });
+        
     </script>
 </body>
 </html>
