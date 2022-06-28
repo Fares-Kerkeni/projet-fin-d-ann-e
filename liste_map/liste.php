@@ -159,7 +159,7 @@
         </div>
         <div id="all_commerce" class="all_commerce">
             <div class="commerce">
-                <div class="all_image_commerce">
+                <!-- <div class="all_image_commerce">
                     <img class="image_commerce" src="img/closeup-of-two-women-wearing-facemasks-during-the-covid-19-pandemic-sitting-at-cafe.jpg" alt="">
                     <img class="image_commerce" src="img/colorful-paper-bags-placed-on-the-table.jpg" alt="">
                     <img class="image_commerce" src="img/interior-shot-of-cafe-with-chairs-near-the-bar-with-wooden-tables.jpg" alt="">
@@ -168,31 +168,7 @@
                     <span class="nom_commerce">Ibis Paris Vaugirard Porte de Versailles</span>
                     <span class="avis_commerce">4,5 <img src="img/coeur.svg" alt=""> (132)</span>
                     <span class="type_commerce">Hôtel - 30 km</span>
-                </div>
-            </div>
-            <div class="commerce">
-                <div class="all_image_commerce">
-                    <img class="image_commerce" src="img/closeup-of-two-women-wearing-facemasks-during-the-covid-19-pandemic-sitting-at-cafe.jpg" alt="">
-                    <img class="image_commerce" src="img/colorful-paper-bags-placed-on-the-table.jpg" alt="">
-                    <img class="image_commerce" src="img/interior-shot-of-cafe-with-chairs-near-the-bar-with-wooden-tables.jpg" alt="">
-                </div>
-                <div class="all_texte_commerce">
-                    <span class="nom_commerce">Ibis Paris Vaugirard Porte de Versailles</span>
-                    <span class="avis_commerce">4,5 <img src="img/coeur.svg" alt=""> (132)</span>
-                    <span class="type_commerce">Hôtel - 30 km</span>
-                </div>
-            </div>
-            <div class="commerce">
-                <div class="all_image_commerce">
-                    <img class="image_commerce" src="img/closeup-of-two-women-wearing-facemasks-during-the-covid-19-pandemic-sitting-at-cafe.jpg" alt="">
-                    <img class="image_commerce" src="img/colorful-paper-bags-placed-on-the-table.jpg" alt="">
-                    <img class="image_commerce" src="img/interior-shot-of-cafe-with-chairs-near-the-bar-with-wooden-tables.jpg" alt="">
-                </div>
-                <div class="all_texte_commerce">
-                    <span class="nom_commerce">Ibis Paris Vaugirard Porte de Versailles</span>
-                    <span class="avis_commerce">4,5 <img src="img/coeur.svg" alt=""> (132)</span>
-                    <span class="type_commerce">Hôtel - 30 km</span>
-                </div>
+                </div> -->
             </div>
         </div>
     </main>
