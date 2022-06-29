@@ -1,7 +1,7 @@
 <?php
     $engine = "mysql";
     $host = "localhost";
-    $port = 3306;
+    $port = 8889;
     $dbname = "pfa_pwa";  
     $username = "root";
     $password = "root";

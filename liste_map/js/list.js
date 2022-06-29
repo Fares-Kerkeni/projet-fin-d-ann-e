@@ -113,11 +113,13 @@ function create_commerces(){
 
                 const submit_form = document.createElement("input");
                 submit_form.setAttribute("type", "submit");
-                submit_form.setAttribute("value", "Add favoris");
+                submit_form.setAttribute("value", "Favoris");
+                submit_form.setAttribute("name", "submit_favoris");
 
                 const id_commerce = document.createElement("input");
                 id_commerce.setAttribute("type", "hidden");
                 id_commerce.setAttribute("value", json[i].id_commerce);
+                id_commerce.setAttribute("name", "id_commerce");
 
                 form.appendChild(submit_form);
                 form.appendChild(id_commerce);
@@ -168,11 +170,13 @@ function create_commerces(){
 
                 const submit_form = document.createElement("input");
                 submit_form.setAttribute("type", "submit");
-                submit_form.setAttribute("value", "Add favoris");
+                submit_form.setAttribute("value", "Favoris");
+                submit_form.setAttribute("name", "submit_favoris");
 
                 const id_commerce = document.createElement("input");
                 id_commerce.setAttribute("type", "hidden");
                 id_commerce.setAttribute("value", json[i].id_commerce);
+                id_commerce.setAttribute("name", "id_commerce");
 
                 form.appendChild(submit_form);
                 form.appendChild(id_commerce);

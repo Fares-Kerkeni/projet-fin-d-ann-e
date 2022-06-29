@@ -1,6 +1,12 @@
 <?php
-session_start();
-include '../bdd.php';
+    session_start();
+    include "../bdd.php";
+    if(isset($_POST['delete_favoris'])){
+        $id_favoris = $_POST['id_favoris'];
+        $delete_favoris = $pdo->prepare("DELETE FROM favoris WHERE id_favoris = '".$id_favoris."'");
+        $delete_favoris->execute();
+        header('Location: ../compte_favoris/favoris.php');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -27,106 +33,8 @@ include '../bdd.php';
         </div>
         <img src="img/micro.svg" alt="" class="micro">
     </div>
-    <div class="contener_favoris" >
-        <div class="favoris">
-            <div class="img_text">
-                <div class="image_entreprise">
-                    <img src="img/rest.jpg" alt="">
-                </div>
-                <div class="text_favoris">
-                    <p>Le carlyle</p>
-                    <p>Viry Châtillon </p>
-                    <p>Ouvert</p>
-                </div>
-            </div>
+    <div id="contener_favoris" class="contener_favoris" >
 
-            <img src="img/sta_favoris.svg" alt="">
-        </div>
-        <div class="favoris">
-            <div class="img_text">
-                <div class="image_entreprise">
-                    <img src="img/rest.jpg" alt="">
-                </div>
-                <div class="text_favoris">
-                    <p>Le carlyle</p>
-                    <p>Viry Châtillon </p>
-                    <p>Ouvert</p>
-                </div>
-            </div>
-
-            <img src="img/sta_favoris.svg" alt="">
-        </div>
-        <div class="favoris">
-            <div class="img_text">
-                <div class="image_entreprise">
-                    <img src="img/rest.jpg" alt="">
-                </div>
-                <div class="text_favoris">
-                    <p>Le carlyle</p>
-                    <p>Viry Châtillon </p>
-                    <p>Ouvert</p>
-                </div>
-            </div>
-
-            <img src="img/sta_favoris.svg" alt="">
-        </div>
-        
-        <div class="favoris">
-            <div class="img_text">
-                <div class="image_entreprise">
-                    <img src="img/rest.jpg" alt="">
-                </div>
-                <div class="text_favoris">
-                    <p>Le carlyle</p>
-                    <p>Viry Châtillon </p>
-                    <p>Ouvert</p>
-                </div>
-            </div>
-
-            <img src="img/sta_favoris.svg" alt="">
-        </div>
-        <div class="favoris">
-            <div class="img_text">
-                <div class="image_entreprise">
-                    <img src="img/rest.jpg" alt="">
-                </div>
-                <div class="text_favoris">
-                    <p>Le carlyle</p>
-                    <p>Viry Châtillon </p>
-                    <p>Ouvert</p>
-                </div>
-            </div>
-
-            <img src="img/sta_favoris.svg" alt="">
-        </div>
-        <div class="favoris">
-            <div class="img_text">
-                <div class="image_entreprise">
-                    <img src="img/rest.jpg" alt="">
-                </div>
-                <div class="text_favoris">
-                    <p>Le carlyle</p>
-                    <p>Viry Châtillon </p>
-                    <p>Ouvert</p>
-                </div>
-            </div>
-
-            <img src="img/sta_favoris.svg" alt="">
-        </div>
-        <div class="favoris">
-            <div class="img_text">
-                <div class="image_entreprise">
-                    <img src="img/rest.jpg" alt="">
-                </div>
-                <div class="text_favoris">
-                    <p>Le carlyle</p>
-                    <p>Viry Châtillon </p>
-                    <p>Ouvert</p>
-                </div>
-            </div>
-
-            <img src="img/sta_favoris.svg" alt="">
-        </div> 
     </div>
     <div class="footer">
         <div class="nav_barre">
@@ -139,5 +47,6 @@ include '../bdd.php';
             </div> 
         </div>
     </div>  
+    <script src="js/favoris.js"></script>
 </body>
 </html>

@@ -20,12 +20,11 @@ if(isset($_POST['envoi'])){
             $_SESSION['mail'] = $verif_connexion["mail"];
             header('Location: ../liste_map/liste.php');
 
-        }else{
+        }
+        else{
             echo "mauvais mot de passe ou mauvaise adresse mail";            
         }
-    
     }
- 
 }
 ?>
 

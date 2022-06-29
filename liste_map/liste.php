@@ -1,3 +1,14 @@
+<?php
+    session_start();
+    include "../bdd.php";
+    if(isset($_POST['submit_favoris'])){
+        $id_commerce = $_POST['id_commerce'];
+        $requete_inscription = $pdo->prepare("INSERT INTO favoris(id_utilisateur, id_commerce) VALUES ('".$_SESSION['id_utilisateur']."','".$id_commerce."');");
+        $requete_inscription->execute();
+        header('Location: ../compte_favoris/favoris.php');
+    }
+        
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -172,8 +183,5 @@
         <a href="../compte_favoris/compte.php"><img src="img/carbon_user-avatar-filled.svg" alt=""></a>
     </nav>
     <script src="js/list.js"></script>
-    <script>
-        
-    </script>
 </body>
 </html>

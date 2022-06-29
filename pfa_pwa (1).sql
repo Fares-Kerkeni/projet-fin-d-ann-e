@@ -2,8 +2,8 @@
 -- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Jun 29, 2022 at 04:05 PM
+-- Host: localhost:8889
+-- Generation Time: Jun 29, 2022 at 07:22 PM
 -- Server version: 5.7.24
 -- PHP Version: 8.0.1
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `commerces` (
-  `id_commerce` int(255) NOT NULL,
+  `id_commerce` int(10) UNSIGNED NOT NULL,
   `nom` varchar(255) NOT NULL,
   `adresse` varchar(255) NOT NULL,
   `ville` varchar(255) NOT NULL,
@@ -132,11 +132,23 @@ INSERT INTO `commerces` (`id_commerce`, `nom`, `adresse`, `ville`, `code_postal`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `favoris`
+--
+
+CREATE TABLE `favoris` (
+  `id_favoris` int(10) UNSIGNED NOT NULL,
+  `id_utilisateur` int(10) UNSIGNED DEFAULT NULL,
+  `id_commerce` int(10) UNSIGNED DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
-  `id_utilisateur` int(11) NOT NULL,
+  `id_utilisateur` int(10) UNSIGNED NOT NULL,
   `nom` varchar(255) NOT NULL,
   `prenom` varchar(255) NOT NULL,
   `mail` varchar(255) NOT NULL,
@@ -152,7 +164,8 @@ INSERT INTO `user` (`id_utilisateur`, `nom`, `prenom`, `mail`, `mot_de_passe`) V
 (10, '', 'fares', 'kerkenif11@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b'),
 (11, 'kerkeni', 'fares', '123@gmail.com', '123456'),
 (12, 'kyt', 'kyt', 'kyt@gmail.com', '$2y$10$sRK89rrCAM4HU2hb2pBHVuJZJDduqyuqufGlFELMkq9tmPnkW8lX6'),
-(13, 'az', 'az', 'az@gmail.com', '$2y$10$rzRIQZKBrXuA6PbYlLPRg.B1KEmE6VEG1nUv.AWwl3ix7UuKMWDZ2');
+(13, 'az', 'az', 'az@gmail.com', '$2y$10$rzRIQZKBrXuA6PbYlLPRg.B1KEmE6VEG1nUv.AWwl3ix7UuKMWDZ2'),
+(14, 'Sandie', 'Ouallet', 'Sandie@toilette.fr', 'sandie');
 
 --
 -- Indexes for dumped tables
@@ -163,6 +176,14 @@ INSERT INTO `user` (`id_utilisateur`, `nom`, `prenom`, `mail`, `mot_de_passe`) V
 --
 ALTER TABLE `commerces`
   ADD PRIMARY KEY (`id_commerce`);
+
+--
+-- Indexes for table `favoris`
+--
+ALTER TABLE `favoris`
+  ADD PRIMARY KEY (`id_favoris`),
+  ADD KEY `id_commerce` (`id_commerce`),
+  ADD KEY `id_utilisateur` (`id_utilisateur`);
 
 --
 -- Indexes for table `user`
@@ -178,13 +199,30 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `commerces`
 --
 ALTER TABLE `commerces`
-  MODIFY `id_commerce` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id_commerce` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+
+--
+-- AUTO_INCREMENT for table `favoris`
+--
+ALTER TABLE `favoris`
+  MODIFY `id_favoris` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_utilisateur` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `favoris`
+--
+ALTER TABLE `favoris`
+  ADD CONSTRAINT `favoris_ibfk_1` FOREIGN KEY (`id_commerce`) REFERENCES `commerces` (`id_commerce`),
+  ADD CONSTRAINT `favoris_ibfk_2` FOREIGN KEY (`id_utilisateur`) REFERENCES `user` (`id_utilisateur`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
